@@ -816,7 +816,7 @@ mpris2_client_set_media_player_properties (Mpris2Client *mpris2, const gchar *pr
 	                                     G_DBUS_CALL_FLAGS_NONE,
 	                                     -1,
 	                                     NULL,
-	                                     NULL);
+	                                     &error);
 	if (reply == NULL) {
 		g_warning ("Unable to set session: %s", error->message);
 		g_error_free (error);
